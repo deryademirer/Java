@@ -1,0 +1,39 @@
+package sesli_harf;
+import java.util.Scanner;
+
+public class sesliHarf {
+
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		sayiBul a=new sayiBul();
+		char[] sesli={'a','A','e','E','ı','I','i','İ','o','O','ö','Ö','u','U','ü','Ü'};
+		String cumle;
+		System.out.print("Enter a word:");
+		cumle=input.next();
+		a.hesapla(cumle,sesli);
+		
+		
+	}
+	
+}
+ class sayiBul
+ {
+	 public void hesapla(String x , char y[])
+	 {
+		 int i,j;
+		 int sayac=0;
+		 for(i=0;i<x.length();i++)
+		 {
+			 for(j=0;j<16;j++)
+			 {
+				 if(x.charAt(i)==y[j]) // charAt fonksiyonu belirtilen pozisyondaki değeri bulur.
+				 {
+					 sayac=sayac+1;
+				 }
+			 }
+		 }
+		 System.out.println("Number of vowel:"+sayac);
+	 }
+	 
+ }
