@@ -1,0 +1,30 @@
+package üstelFonksiyon;
+import java.util.Scanner;
+
+public class fonk {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		double e = 0,i;
+		double adimSayisi;
+		System.out.println("Enter number of steps:");
+		adimSayisi=input.nextDouble();
+		for(i=0;i<=adimSayisi;i++)
+		{
+			e=e+(Math.pow(adimSayisi, i)/factorial(i));
+		}
+		System.out.println("Result is "+e); 
+		
+	}
+
+	public static double factorial(double x)
+	{
+		double result=1;
+		double a=1;
+		for(a=1;a<=x;a++)
+		{
+			result=result*a;
+		}
+		return result;
+	}
+}
