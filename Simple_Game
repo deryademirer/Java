@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class game {
+
+	
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		System.out.println("1 ve 100 arasında bir sayı tutun!");
+		int alt=1;
+		int üst=100;
+		int secim;
+		int tahmin;
+		int sayac=0;
+		do
+		{	
+		tahmin=(alt+üst)/2;
+		System.out.println("Tahmin="+tahmin);
+		System.out.println("Secimizi giriniz:");
+		secim=input.nextInt();
+		if(secim==0)
+		{
+			System.out.println("Doğru tamin...");
+		}
+		else if(secim==1)
+		{
+			System.out.println("Benim sayım daha küçük...");
+			üst=tahmin;
+		}
+		else if(secim==2)
+		{
+			System.out.println("Benim sayım daha büyük...");
+			alt=tahmin;
+		}
+		sayac++;
+		}
+		while(secim!=0);
+		System.out.println("Sonuc"+sayac+"adımda bulundu...");
+		
+		
+	}
+	
+}
